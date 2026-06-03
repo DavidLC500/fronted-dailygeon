@@ -5,7 +5,43 @@
     "loadingSession": "Loading session...",
     "email": "Email",
     "password": "Password",
-    "error": "Error"
+    "error": "Error",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "close": "Close"
+  },
+  "nav": {
+    "dungeon": "Quests",
+    "calendar": "Calendar",
+    "boss": "Boss",
+    "character": "Character",
+    "settings": "Settings"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "noTasks": "No quests on this day",
+    "legend": "🟡 Completed · 🔴 Pending"
+  },
+  "boss": {
+    "title": "Weekly boss",
+    "weekly": "Boss of the week",
+    "daysLeft": "Days left: {{days}}",
+    "reward": "+{{xp}} XP when defeated",
+    "history": "History",
+    "noHistory": "You haven't faced any other bosses yet",
+    "status": {
+      "active": "In combat",
+      "defeated": "Defeated",
+      "expired": "Escaped"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "account": "Account",
+    "username": "Username",
+    "email": "Email"
   },
   "auth": {
     "appName": "DAILYGEON",
@@ -37,12 +73,68 @@
       "mage": "Mage",
       "rogue": "Rogue",
       "cleric": "Cleric"
-    }
+    },
+    "profileTitle": "Profile",
+    "level": "Level",
+    "nextLevel": "Next level: {{xp}} XP",
+    "stats": "Stats",
+    "total": "Total",
+    "completedStat": "Completed",
+    "pending": "Pending",
+    "completion": "Completion",
+    "editName": "Edit name",
+    "nameUpdated": "Name updated",
+    "levelUp": "Level {{level}}!",
+    "leveledUp": "You leveled up!"
   },
   "dungeon": {
     "title": "Dungeon",
     "tasksCount_one": "{{count}} quest",
-    "tasksCount_other": "{{count}} quests"
+    "tasksCount_other": "{{count}} quests",
+    "empty": "No quests yet. Create your first one!"
+  },
+  "task": {
+    "new": "New quest",
+    "edit": "Edit quest",
+    "titleLabel": "Title",
+    "titlePlaceholder": "e.g. Study React 1h",
+    "description": "Description",
+    "descriptionPlaceholder": "Details (optional)",
+    "dueDate": "Due date",
+    "priority": "Priority",
+    "category": "Category",
+    "difficulty": "Difficulty",
+    "daily": "Daily quest",
+    "create": "Create quest",
+    "save": "Save changes",
+    "complete": "Complete quest",
+    "confirmDelete": "Delete this quest?",
+    "categories": {
+      "health": "Health",
+      "work": "Work",
+      "learning": "Learning",
+      "fitness": "Fitness",
+      "general": "General"
+    },
+    "priorities": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "critical": "Critical"
+    },
+    "difficulties": {
+      "easy": "Easy",
+      "normal": "Normal",
+      "hard": "Hard",
+      "legendary": "Legendary"
+    },
+    "toast": {
+      "created": "Quest created",
+      "updated": "Quest updated",
+      "deleted": "Quest deleted",
+      "completed": "+{{xp}} XP!",
+      "levelUp": "You reached level {{level}}!"
+    }
   },
   "errors": {
     "INVALID_CREDENTIALS": "Wrong email or password",

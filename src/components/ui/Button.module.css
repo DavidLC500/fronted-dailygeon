@@ -11,7 +11,8 @@
   border-radius: var(--radius);
   cursor: pointer;
   transition: transform 0.05s ease, opacity 0.15s ease;
-  color: #000;
+  color: var(--color-on-secondary);
+  min-height: var(--touch-min);
 }
 
 .button:active {
@@ -31,7 +32,7 @@
 /* Variante principal: morado */
 .primary {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
 }
 
 /* Variante secundaria: dorado */

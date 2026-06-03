@@ -28,4 +28,11 @@ i18n
     },
   });
 
+// Mantiene el atributo lang del <html> sincronizado con el idioma (a11y/SEO)
+const syncHtmlLang = (lng) => {
+  document.documentElement.lang = lng;
+};
+syncHtmlLang(i18n.resolvedLanguage || 'es');
+i18n.on('languageChanged', syncHtmlLang);
+
 export default i18n;

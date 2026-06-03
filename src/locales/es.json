@@ -5,7 +5,43 @@
     "loadingSession": "Cargando sesión...",
     "email": "Email",
     "password": "Contraseña",
-    "error": "Error"
+    "error": "Error",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "close": "Cerrar"
+  },
+  "nav": {
+    "dungeon": "Misiones",
+    "calendar": "Calendario",
+    "boss": "Jefe",
+    "character": "Personaje",
+    "settings": "Ajustes"
+  },
+  "calendar": {
+    "title": "Calendario",
+    "noTasks": "Sin misiones este día",
+    "legend": "🟡 Completadas · 🔴 Pendientes"
+  },
+  "boss": {
+    "title": "Jefe semanal",
+    "weekly": "Jefe de la semana",
+    "daysLeft": "Días restantes: {{days}}",
+    "reward": "+{{xp}} XP al derrotarlo",
+    "history": "Historial",
+    "noHistory": "Aún no has enfrentado a otros jefes",
+    "status": {
+      "active": "En combate",
+      "defeated": "Derrotado",
+      "expired": "Escapó"
+    }
+  },
+  "settings": {
+    "title": "Ajustes",
+    "language": "Idioma",
+    "account": "Cuenta",
+    "username": "Usuario",
+    "email": "Email"
   },
   "auth": {
     "appName": "DAILYGEON",
@@ -37,12 +73,68 @@
       "mage": "Mago",
       "rogue": "Pícaro",
       "cleric": "Clérigo"
-    }
+    },
+    "profileTitle": "Perfil",
+    "level": "Nivel",
+    "nextLevel": "Siguiente nivel: {{xp}} XP",
+    "stats": "Estadísticas",
+    "total": "Total",
+    "completedStat": "Completadas",
+    "pending": "Pendientes",
+    "completion": "Completitud",
+    "editName": "Editar nombre",
+    "nameUpdated": "Nombre actualizado",
+    "levelUp": "¡Nivel {{level}}!",
+    "leveledUp": "¡Has subido de nivel!"
   },
   "dungeon": {
     "title": "Dungeon",
     "tasksCount_one": "{{count}} misión",
-    "tasksCount_other": "{{count}} misiones"
+    "tasksCount_other": "{{count}} misiones",
+    "empty": "No tienes misiones todavía. ¡Crea la primera!"
+  },
+  "task": {
+    "new": "Nueva misión",
+    "edit": "Editar misión",
+    "titleLabel": "Título",
+    "titlePlaceholder": "Ej: Estudiar React 1h",
+    "description": "Descripción",
+    "descriptionPlaceholder": "Detalles (opcional)",
+    "dueDate": "Fecha límite",
+    "priority": "Prioridad",
+    "category": "Categoría",
+    "difficulty": "Dificultad",
+    "daily": "Misión diaria",
+    "create": "Crear misión",
+    "save": "Guardar cambios",
+    "complete": "Completar misión",
+    "confirmDelete": "¿Eliminar esta misión?",
+    "categories": {
+      "health": "Salud",
+      "work": "Trabajo",
+      "learning": "Aprendizaje",
+      "fitness": "Fitness",
+      "general": "General"
+    },
+    "priorities": {
+      "low": "Baja",
+      "medium": "Media",
+      "high": "Alta",
+      "critical": "Crítica"
+    },
+    "difficulties": {
+      "easy": "Fácil",
+      "normal": "Normal",
+      "hard": "Difícil",
+      "legendary": "Legendaria"
+    },
+    "toast": {
+      "created": "Misión creada",
+      "updated": "Misión actualizada",
+      "deleted": "Misión eliminada",
+      "completed": "¡+{{xp}} XP!",
+      "levelUp": "¡Subiste al nivel {{level}}!"
+    }
   },
   "errors": {
     "INVALID_CREDENTIALS": "Email o contraseña incorrectos",

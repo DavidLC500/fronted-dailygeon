@@ -1,0 +1,52 @@
+/*
+ * Modal.module.css
+ * Overlay oscuro + dialogo centrado con borde pixel.
+ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  z-index: var(--z-modal);
+}
+
+.dialog {
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.title {
+  color: var(--color-secondary);
+  font-size: var(--fs-md);
+}
+
+.close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+}
+
+.body {
+  padding: var(--space-4);
+}

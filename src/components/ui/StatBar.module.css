@@ -1,0 +1,17 @@
+/*
+ * StatBar.module.css
+ * Pista y relleno de la barra de progreso (estetica pixel).
+ */
+
+.track {
+  width: 100%;
+  background-color: var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--radius);
+  transition: width 0.3s ease;
+}
