@@ -78,6 +78,7 @@
     "level": "Nivel",
     "nextLevel": "Siguiente nivel: {{xp}} XP",
     "stats": "Estadísticas",
+    "activity": "Actividad por categoría",
     "total": "Total",
     "completedStat": "Completadas",
     "pending": "Pendientes",

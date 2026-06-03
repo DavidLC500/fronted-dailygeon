@@ -18,6 +18,7 @@ import Button from '../components/ui/Button.jsx';
 import Loader from '../components/ui/Loader.jsx';
 import StatBar from '../components/ui/StatBar.jsx';
 import StatBox from '../components/character/StatBox.jsx';
+import CategoryStats from '../components/character/CategoryStats.jsx';
 import styles from './Character.module.css';
 
 /** Icono por clase del personaje */
@@ -95,16 +96,23 @@ const Character = () => {
         </div>
       </Card>
 
-      <h3 className={styles.section}>{t('character.stats')}</h3>
+      <h2 className={styles.section}>{t('character.stats')}</h2>
       {loading ? (
         <Loader inline />
       ) : (
-        <div className={styles.grid}>
-          <StatBox icon="📋" value={total} label={t('character.total')} />
-          <StatBox icon="✅" value={completed} label={t('character.completedStat')} color="var(--color-success)" />
-          <StatBox icon="⏳" value={pending} label={t('character.pending')} color="var(--color-primary)" />
-          <StatBox icon="📈" value={`${completion}%`} label={t('character.completion')} color="var(--color-secondary)" />
-        </div>
+        <>
+          <div className={styles.grid}>
+            <StatBox icon="📋" value={total} label={t('character.total')} />
+            <StatBox icon="✅" value={completed} label={t('character.completedStat')} color="var(--color-success)" />
+            <StatBox icon="⏳" value={pending} label={t('character.pending')} color="var(--color-primary)" />
+            <StatBox icon="📈" value={`${completion}%`} label={t('character.completion')} color="var(--color-secondary)" />
+          </div>
+
+          <h2 className={styles.section}>{t('character.activity')}</h2>
+          <Card>
+            <CategoryStats tasks={tasks} />
+          </Card>
+        </>
       )}
     </div>
   );

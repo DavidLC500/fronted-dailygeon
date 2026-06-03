@@ -33,18 +33,21 @@ export const AuthProvider = ({ children }) => {
     restore();
   }, []);
 
-  /** Inicia sesion y guarda el token */
+  /** Inicia sesion, guarda el token y carga el usuario con su personaje poblado */
   const login = useCallback(async (email, password) => {
-    const { token, user } = await api.post('/auth/login', { email, password });
+    const { token } = await api.post('/auth/login', { email, password });
     setToken(token);
+    // /me devuelve el usuario con el personaje poblado (login solo da el id)
+    const { user } = await api.get('/auth/me');
     setUser(user);
     return user;
   }, []);
 
   /** Registra una cuenta nueva y la deja logueada */
   const register = useCallback(async (username, email, password) => {
-    const { token, user } = await api.post('/auth/register', { username, email, password });
+    const { token } = await api.post('/auth/register', { username, email, password });
     setToken(token);
+    const { user } = await api.get('/auth/me');
     setUser(user);
     return user;
   }, []);

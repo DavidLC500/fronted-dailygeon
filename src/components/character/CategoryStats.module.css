@@ -1,0 +1,37 @@
+/*
+ * CategoryStats.module.css
+ * Barras de actividad por categoria.
+ */
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.label {
+  width: 110px;
+  flex-shrink: 0;
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-text);
+}
+
+.barWrap {
+  flex: 1;
+}
+
+.count {
+  width: 28px;
+  text-align: right;
+  flex-shrink: 0;
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
