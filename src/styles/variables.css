@@ -1,0 +1,54 @@
+/*
+ * variables.css
+ * Variables globales del tema de Dailygeon: colores, espaciados, tipografia,
+ * tamanos y bordes. Toda la app referencia estas variables para mantener
+ * coherencia visual y poder cambiar el tema desde un unico sitio.
+ */
+
+:root {
+  /* --- Paleta RPG (porteada de la app movil) --- */
+  --color-bg: #0f0f1a;
+  --color-surface: #1a1a2e;
+  --color-card: #16213e;
+  --color-border: #2a2a4a;
+  --color-text: #e8e8f0;
+  --color-text-muted: #8a8aa0;
+  --color-primary: #7c3aed;   /* morado: acciones principales */
+  --color-secondary: #fbbf24; /* dorado: XP, titulos, destacados */
+  --color-accent: #ef4444;    /* rojo: jefes, alertas, prioridad */
+  --color-success: #22c55e;   /* verde: completado */
+  --color-health: #ef4444;    /* rojo: barra de vida */
+
+  /* --- Colores por categoria de mision --- */
+  --cat-health: #ef4444;
+  --cat-work: #3b82f6;
+  --cat-learning: #a855f7;
+  --cat-fitness: #f97316;
+  --cat-general: #6b7280;
+
+  /* --- Espaciados (escala de 4px) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+
+  /* --- Tipografia --- */
+  --font-pixel: 'Press Start 2P', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-xs: 8px;
+  --fs-sm: 10px;
+  --fs-md: 12px;
+  --fs-lg: 16px;
+  --fs-xl: 22px;
+
+  /* --- Bordes (estetica pixel: sin redondeo) --- */
+  --radius: 0px;
+  --border-width: 2px;
+
+  /* --- Sombras y capas --- */
+  --shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
+  --z-modal: 1000;
+}

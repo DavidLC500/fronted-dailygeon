@@ -1,0 +1,47 @@
+/*
+ * Button.module.css
+ * Estilos del boton reutilizable. Estetica pixel (sin redondeo, borde grueso).
+ */
+
+.button {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-sm);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.05s ease, opacity 0.15s ease;
+  color: #000;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+/* Ocupa todo el ancho del contenedor */
+.fullWidth {
+  width: 100%;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variante principal: morado */
+.primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Variante secundaria: dorado */
+.secondary {
+  background-color: var(--color-secondary);
+}
+
+/* Variante ghost: transparente con borde */
+.ghost {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}

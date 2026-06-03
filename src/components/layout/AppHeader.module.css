@@ -1,0 +1,27 @@
+/*
+ * AppHeader.module.css
+ * Estilos de la cabecera de las pantallas internas.
+ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  color: var(--color-secondary);
+  font-size: var(--fs-lg);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.username {
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+}

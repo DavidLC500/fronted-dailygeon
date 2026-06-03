@@ -1,0 +1,48 @@
+/*
+ * global.css
+ * Reset basico y estilos base de la app. Usa las variables de variables.css.
+ * Carga la fuente pixel Press Start 2P desde Google Fonts.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Titulos y elementos de interfaz usan la fuente pixel */
+h1, h2, h3, h4, button, .pixel {
+  font-family: var(--font-pixel);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+/* Scroll oscuro acorde al tema */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}

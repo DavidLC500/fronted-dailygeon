@@ -1,0 +1,47 @@
+{
+  "common": {
+    "logout": "Salir",
+    "loading": "Cargando...",
+    "loadingSession": "Cargando sesión...",
+    "email": "Email",
+    "password": "Contraseña",
+    "error": "Error"
+  },
+  "auth": {
+    "appName": "DAILYGEON",
+    "loginSubtitle": "Convierte tus tareas en una aventura",
+    "registerSubtitle": "Crea tu cuenta de aventurero",
+    "emailPlaceholder": "tu@email.com",
+    "passwordPlaceholder": "******",
+    "username": "Nombre de usuario",
+    "usernamePlaceholder": "heroe123",
+    "passwordMinPlaceholder": "mínimo 6 caracteres",
+    "login": "Entrar",
+    "register": "Crear cuenta",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "registerLink": "Regístrate",
+    "loginLink": "Inicia sesión",
+    "welcomeBack": "Bienvenido de nuevo",
+    "accountCreated": "¡Cuenta creada! Crea tu personaje"
+  },
+  "character": {
+    "title": "Tu héroe",
+    "subtitle": "Elige nombre y clase",
+    "name": "Nombre del personaje",
+    "namePlaceholder": "Aragorn",
+    "start": "Empezar aventura",
+    "created": "¡Personaje creado!",
+    "classes": {
+      "warrior": "Guerrero",
+      "mage": "Mago",
+      "rogue": "Pícaro",
+      "cleric": "Clérigo"
+    }
+  },
+  "dungeon": {
+    "title": "Dungeon",
+    "tasksCount_one": "{{count}} misión",
+    "tasksCount_other": "{{count}} misiones"
+  }
+}

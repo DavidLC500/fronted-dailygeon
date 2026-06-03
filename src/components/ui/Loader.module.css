@@ -1,0 +1,22 @@
+/*
+ * Loader.module.css
+ * Estilos del indicador de carga (centrado o en linea).
+ */
+
+.center {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline {
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.text {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
