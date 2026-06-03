@@ -9,18 +9,45 @@
   padding: var(--space-4);
 }
 
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
 .count {
   font-family: var(--font-pixel);
   font-size: var(--fs-sm);
   color: var(--color-secondary);
-  margin-bottom: var(--space-3);
 }
 
 .list {
   display: grid;
-  gap: var(--space-1);
+  gap: var(--space-3);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-4);
+}
+
+.emptyIcon {
+  font-size: 56px;
+}
+
+.emptyText {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
 }
 
 .error {
+  text-align: center;
   color: var(--color-accent);
+  font-size: var(--fs-md);
+  padding: var(--space-6) 0;
 }

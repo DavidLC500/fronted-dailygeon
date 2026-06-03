@@ -12,19 +12,23 @@
   --color-card: #16213e;
   --color-border: #2a2a4a;
   --color-text: #e8e8f0;
-  --color-text-muted: #8a8aa0;
+  --color-text-muted: #a3a3bd;  /* aclarado para mejor contraste (WCAG AA) */
   --color-primary: #7c3aed;   /* morado: acciones principales */
   --color-secondary: #fbbf24; /* dorado: XP, titulos, destacados */
   --color-accent: #ef4444;    /* rojo: jefes, alertas, prioridad */
   --color-success: #22c55e;   /* verde: completado */
   --color-health: #ef4444;    /* rojo: barra de vida */
 
+  /* Texto que va ENCIMA de un color de fondo (contraste garantizado) */
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #000000;
+
   /* --- Colores por categoria de mision --- */
   --cat-health: #ef4444;
   --cat-work: #3b82f6;
   --cat-learning: #a855f7;
   --cat-fitness: #f97316;
-  --cat-general: #6b7280;
+  --cat-general: #9ca3af;
 
   /* --- Espaciados (escala de 4px) --- */
   --space-1: 4px;
@@ -35,20 +39,23 @@
   --space-6: 32px;
   --space-8: 48px;
 
-  /* --- Tipografia --- */
+  /* --- Tipografia (escala subida para legibilidad, sigue siendo pixel) --- */
   --font-pixel: 'Press Start 2P', system-ui, sans-serif;
   --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --fs-xs: 8px;
-  --fs-sm: 10px;
-  --fs-md: 12px;
-  --fs-lg: 16px;
-  --fs-xl: 22px;
+  --fs-xs: 10px;
+  --fs-sm: 12px;
+  --fs-md: 14px;
+  --fs-lg: 18px;
+  --fs-xl: 26px;
+
+  /* Alto minimo de elementos interactivos (target tactil WCAG 2.5.5) */
+  --touch-min: 44px;
 
   /* --- Bordes (estetica pixel: sin redondeo) --- */
   --radius: 0px;
   --border-width: 2px;
 
-  /* --- Sombras y capas --- */
-  --shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
+  /* --- Sombras y capas (sombra dura pixel) --- */
+  --shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
   --z-modal: 1000;
 }

@@ -1,0 +1,22 @@
+/*
+ * LevelUpModal.module.css
+ * Contenido de la celebracion de subida de nivel.
+ */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+}
+
+.star {
+  font-size: 64px;
+}
+
+.level {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xl);
+  color: var(--color-secondary);
+}

@@ -1,0 +1,14 @@
+/*
+ * PriorityBadge.module.css
+ * Etiqueta pequena con borde del color de la prioridad.
+ */
+
+.badge {
+  border: 1px solid;
+  border-radius: var(--radius);
+  padding: 1px var(--space-2);
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  text-transform: capitalize;
+  white-space: nowrap;
+}

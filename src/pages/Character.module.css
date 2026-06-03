@@ -1,0 +1,107 @@
+/*
+ * Character.module.css
+ * Estilos del perfil de personaje.
+ */
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  border: 3px solid var(--color-secondary);
+  border-radius: var(--radius);
+}
+
+.nameBtn {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-family: var(--font-pixel);
+  font-size: var(--fs-md);
+  cursor: pointer;
+}
+
+.nameEdit {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.class {
+  color: var(--color-text-muted);
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  text-transform: capitalize;
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.levelBadge {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-secondary);
+  border-radius: var(--radius);
+}
+
+.levelNum {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xl);
+  color: var(--color-on-secondary);
+}
+
+.levelLbl {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-on-secondary);
+}
+
+.xpInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.xpText {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-text);
+}
+
+.section {
+  color: var(--color-secondary);
+  font-size: var(--fs-md);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

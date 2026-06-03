@@ -1,0 +1,52 @@
+/*
+ * BossCard.module.css
+ * Ficha del jefe centrada con acento rojo.
+ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  border-color: var(--color-accent);
+  text-align: center;
+}
+
+.emoji {
+  font-size: 64px;
+}
+
+.name {
+  color: var(--color-text);
+  font-size: var(--fs-lg);
+}
+
+.status {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-accent);
+}
+
+.hp {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.days {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-secondary);
+}
+
+.reward {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-sm);
+  color: var(--color-secondary);
+}
+
+.desc {
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+}

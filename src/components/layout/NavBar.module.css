@@ -1,0 +1,42 @@
+/*
+ * NavBar.module.css
+ * Barra de navegacion inferior fija.
+ */
+
+.nav {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  background: var(--color-surface);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-1);
+  color: var(--color-text-muted);
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  border-top: 3px solid transparent;
+}
+
+.icon {
+  font-size: var(--fs-md);
+}
+
+/* Seccion activa: dorado + borde superior (no solo color, por daltonismo) */
+.active {
+  color: var(--color-secondary);
+  border-top-color: var(--color-secondary);
+  background: rgba(251, 191, 36, 0.08);
+}

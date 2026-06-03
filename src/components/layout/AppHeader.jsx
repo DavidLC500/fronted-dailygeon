@@ -16,7 +16,7 @@ const AppHeader = ({ title }) => {
 
   return (
     <header className={styles.header}>
-      <h2 className={styles.title}>{title}</h2>
+      <h1 className={styles.title}>{title}</h1>
       <div className={styles.right}>
         <LanguageToggle />
         <span className={styles.username}>{user?.username}</span>
