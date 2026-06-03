@@ -21,7 +21,9 @@ const Settings = () => {
 
       <Card className={styles.section}>
         <h2 className={styles.label}>{t('settings.language')}</h2>
-        <LanguageToggle />
+        <div className={styles.langWrap}>
+          <LanguageToggle />
+        </div>
       </Card>
 
       <Card className={styles.section}>
