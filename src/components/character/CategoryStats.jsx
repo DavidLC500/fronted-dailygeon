@@ -1,12 +1,12 @@
 /**
  * CategoryStats.jsx
- * Visor de actividad por categoria: una barra por categoria con el numero
- * de misiones completadas, proporcional al maximo. Inspirado en el resumen
- * de actividad del Dailygeon original.
+ * Visor de actividad por categoria: una barra segmentada (10 segmentos) por
+ * categoria con el numero de misiones completadas. La barra se llena por
+ * segmentos y se limita a 10; el contador sigue mostrando el valor real.
  */
 
 import { useTranslation } from 'react-i18next';
-import StatBar from '../ui/StatBar.jsx';
+import SegmentBar from '../ui/SegmentBar.jsx';
 import { CATEGORIES, CATEGORY_ICON, CATEGORY_COLOR } from '../../utils/taskMeta.js';
 import styles from './CategoryStats.module.css';
 
@@ -18,7 +18,6 @@ const CategoryStats = ({ tasks }) => {
     cat,
     count: tasks.filter((x) => x.category === cat && x.completed).length,
   }));
-  const max = Math.max(...rows.map((r) => r.count), 1);
 
   return (
     <div className={styles.wrap}>
@@ -26,7 +25,7 @@ const CategoryStats = ({ tasks }) => {
         <div key={cat} className={styles.row}>
           <span className={styles.label}>{CATEGORY_ICON[cat]} {t(`task.categories.${cat}`)}</span>
           <div className={styles.barWrap}>
-            <StatBar percent={(count / max) * 100} color={CATEGORY_COLOR[cat]} />
+            <SegmentBar value={count} segments={10} color={CATEGORY_COLOR[cat]} />
           </div>
           <span className={styles.count}>{count}</span>
         </div>
