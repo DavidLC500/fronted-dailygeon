@@ -1,0 +1,26 @@
+/*
+ * Dungeon.module.css
+ * Estilos de la pantalla principal de misiones.
+ */
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.count {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-sm);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.error {
+  color: var(--color-accent);
+}

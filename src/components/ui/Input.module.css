@@ -1,0 +1,36 @@
+/*
+ * Input.module.css
+ * Estilos del campo de formulario reutilizable.
+ */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.label {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-xs);
+  color: var(--color-secondary);
+}
+
+.input {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  font-size: var(--fs-md);
+  font-family: var(--font-body);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}

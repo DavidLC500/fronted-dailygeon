@@ -1,0 +1,43 @@
+/*
+ * Auth.module.css
+ * Estilos compartidos por las pantallas de login y registro.
+ */
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+/* Fila del selector de idioma, alineado a la derecha del card */
+.langRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-5);
+}
+
+.switch {
+  margin-top: var(--space-4);
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+}

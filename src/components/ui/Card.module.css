@@ -1,0 +1,11 @@
+/*
+ * Card.module.css
+ * Contenedor base con fondo de superficie y borde grueso (estetica pixel).
+ */
+
+.card {
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
