@@ -1,13 +1,14 @@
 /*
  * AppHeader.module.css
  * Estilos de la cabecera de las pantallas internas.
+ * Titulo a la izquierda (se acorta con "…" si no cabe) y nombre + salir
+ * fijos a la derecha, todo en una sola linea incluso en movil.
  */
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: var(--space-2);
   margin-bottom: var(--space-4);
 }
@@ -15,15 +16,35 @@
 .title {
   color: var(--color-secondary);
   font-size: var(--fs-lg);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* El grupo de la derecha no se encoge: siempre visible */
 .right {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
+  flex-shrink: 0;
 }
 
 .username {
   color: var(--color-text-muted);
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* En pantallas estrechas reduce el titulo y el nombre para que todo quepa */
+@media (max-width: 480px) {
+  .title {
+    font-size: var(--fs-md);
+  }
+  .username {
+    max-width: 70px;
+  }
 }

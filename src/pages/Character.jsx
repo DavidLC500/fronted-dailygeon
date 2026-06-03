@@ -19,6 +19,7 @@ import Loader from '../components/ui/Loader.jsx';
 import StatBar from '../components/ui/StatBar.jsx';
 import StatBox from '../components/character/StatBox.jsx';
 import CategoryStats from '../components/character/CategoryStats.jsx';
+import RadarChart from '../components/character/RadarChart.jsx';
 import styles from './Character.module.css';
 
 /** Icono por clase del personaje */
@@ -109,6 +110,9 @@ const Character = () => {
           </div>
 
           <h2 className={styles.section}>{t('character.activity')}</h2>
+          <Card>
+            <RadarChart tasks={tasks} />
+          </Card>
           <Card>
             <CategoryStats tasks={tasks} />
           </Card>

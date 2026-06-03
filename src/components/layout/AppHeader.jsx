@@ -7,7 +7,6 @@
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../hooks/useAuth.js';
 import Button from '../ui/Button.jsx';
-import LanguageToggle from '../ui/LanguageToggle.jsx';
 import styles from './AppHeader.module.css';
 
 const AppHeader = ({ title }) => {
@@ -18,7 +17,6 @@ const AppHeader = ({ title }) => {
     <header className={styles.header}>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.right}>
-        <LanguageToggle />
         <span className={styles.username}>{user?.username}</span>
         <Button variant="ghost" onClick={logout}>{t('common.logout')}</Button>
       </div>
