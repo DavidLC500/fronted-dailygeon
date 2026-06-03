@@ -23,6 +23,12 @@
   font-size: var(--fs-sm);
 }
 
+/* Centra el selector de idioma dentro de su tarjeta */
+.langWrap {
+  display: flex;
+  justify-content: center;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
