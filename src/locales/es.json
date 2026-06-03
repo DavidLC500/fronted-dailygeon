@@ -43,5 +43,21 @@
     "title": "Dungeon",
     "tasksCount_one": "{{count}} misión",
     "tasksCount_other": "{{count}} misiones"
+  },
+  "errors": {
+    "INVALID_CREDENTIALS": "Email o contraseña incorrectos",
+    "MISSING_FIELDS": "Faltan campos obligatorios",
+    "DUPLICATE": "Ese usuario o email ya está registrado",
+    "NO_TOKEN": "Necesitas iniciar sesión",
+    "INVALID_TOKEN": "Tu sesión ha caducado, vuelve a entrar",
+    "USER_NOT_FOUND": "Usuario no encontrado",
+    "CHARACTER_EXISTS": "Ya tienes un personaje",
+    "CHARACTER_NOT_FOUND": "Personaje no encontrado",
+    "TASK_NOT_FOUND": "Misión no encontrada",
+    "TASK_ALREADY_COMPLETED": "La misión ya estaba completada",
+    "RUN_NOT_FOUND": "No hay ningún jefe activo",
+    "VALIDATION": "Hay datos no válidos",
+    "SERVER_ERROR": "Error del servidor, inténtalo más tarde",
+    "default": "Algo ha salido mal"
   }
 }
