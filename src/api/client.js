@@ -34,7 +34,11 @@ const request = async (method, path, body) => {
   const data = res.status !== 204 ? await res.json().catch(() => null) : null;
 
   if (!res.ok) {
-    throw new Error(data?.message || `Error ${res.status}`);
+    // Adjunta el codigo estable del backend para que el frontend lo traduzca
+    const error = new Error(data?.message || `Error ${res.status}`);
+    error.code = data?.code;
+    error.status = res.status;
+    throw error;
   }
   return data;
 };

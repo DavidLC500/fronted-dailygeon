@@ -13,6 +13,7 @@ import Button from '../components/ui/Button.jsx';
 import Input from '../components/ui/Input.jsx';
 import Card from '../components/ui/Card.jsx';
 import LanguageToggle from '../components/ui/LanguageToggle.jsx';
+import { errorMessage } from '../utils/errorMessage.js';
 import styles from './Auth.module.css';
 
 const Login = () => {
@@ -31,7 +32,7 @@ const Login = () => {
       toast.success(t('auth.welcomeBack'));
       navigate('/');
     } catch (err) {
-      toast.error(err.message);
+      toast.error(errorMessage(t, err));
     } finally {
       setLoading(false);
     }

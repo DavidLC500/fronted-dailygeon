@@ -43,5 +43,21 @@
     "title": "Dungeon",
     "tasksCount_one": "{{count}} quest",
     "tasksCount_other": "{{count}} quests"
+  },
+  "errors": {
+    "INVALID_CREDENTIALS": "Wrong email or password",
+    "MISSING_FIELDS": "Please fill in all required fields",
+    "DUPLICATE": "That username or email is already taken",
+    "NO_TOKEN": "You need to sign in",
+    "INVALID_TOKEN": "Your session expired, please sign in again",
+    "USER_NOT_FOUND": "User not found",
+    "CHARACTER_EXISTS": "You already have a character",
+    "CHARACTER_NOT_FOUND": "Character not found",
+    "TASK_NOT_FOUND": "Quest not found",
+    "TASK_ALREADY_COMPLETED": "This quest was already completed",
+    "RUN_NOT_FOUND": "There is no active boss",
+    "VALIDATION": "Some data is invalid",
+    "SERVER_ERROR": "Server error, please try again later",
+    "default": "Something went wrong"
   }
 }
