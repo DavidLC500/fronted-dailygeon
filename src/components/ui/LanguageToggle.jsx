@@ -1,6 +1,6 @@
 /**
  * LanguageToggle.jsx
- * Boton para cambiar el idioma de la app entre espanol e ingles.
+ * Boton para cambiar el idioma de la app entre español e ingles.
  * El idioma elegido se persiste automaticamente en localStorage.
  */
 
