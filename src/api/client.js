@@ -1,7 +1,7 @@
 /**
  * client.js
  * Cliente HTTP centralizado para hablar con la API de Dailygeon.
- * Anade automaticamente el token JWT (si existe) y normaliza los errores
+ * Añade automaticamente el token JWT (si existe) y normaliza los errores
  * para que las pantallas reciban siempre un Error con mensaje legible.
  */
 

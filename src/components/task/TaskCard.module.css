@@ -64,6 +64,16 @@
   color: var(--color-text-muted);
 }
 
+.difficulty {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.difficultyIcon {
+  font-size: 14px;
+}
+
 .xp {
   color: var(--color-secondary);
 }

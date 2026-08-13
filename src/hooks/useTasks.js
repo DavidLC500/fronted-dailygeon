@@ -46,7 +46,7 @@ export const useTasks = () => {
     load();
   }, [load]);
 
-  /** Crea una mision y la anade al principio de la lista */
+  /** Crea una mision y la añade al principio de la lista */
   const createTask = async (data) => {
     const { task } = await api.post('/tasks', data);
     dispatch({ type: 'add', payload: task });

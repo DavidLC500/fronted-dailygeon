@@ -1,6 +1,6 @@
 /**
  * LevelUpModal.jsx
- * Celebracion al subir de nivel: muestra el nuevo nivel a gran tamano.
+ * Celebracion al subir de nivel: muestra el nuevo nivel a gran tamaño.
  * Se abre cuando level no es null (lo controla la pantalla que completa
  * la mision). Refuerza la mecanica de progresion del juego.
  */

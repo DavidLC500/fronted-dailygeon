@@ -2,7 +2,7 @@
  * i18n.js
  * Configuracion de internacionalizacion con i18next + react-i18next.
  * Carga los mensajes de /locales, detecta el idioma del navegador y lo
- * persiste en localStorage. Idioma por defecto: espanol.
+ * persiste en localStorage. Idioma por defecto: español.
  */
 
 import i18n from 'i18next';

@@ -34,8 +34,9 @@ const TaskCard = ({ task, onComplete, onEdit, onDelete }) => {
         {task.description && <p className={styles.desc}>{task.description}</p>}
 
         <div className={styles.footer}>
-          <span style={{ color: DIFFICULTY_COLOR[task.difficulty] }}>
-            <Icon name={DIFFICULTY_ICON[task.difficulty]} /> {t(`task.difficulties.${task.difficulty}`)}
+          <span className={styles.difficulty} style={{ color: DIFFICULTY_COLOR[task.difficulty] }}>
+            <Icon name={DIFFICULTY_ICON[task.difficulty]} className={styles.difficultyIcon} />
+            {t(`task.difficulties.${task.difficulty}`)}
           </span>
           <span className={styles.xp}>+{task.xpReward} XP</span>
           <span className={styles.date}>{due}</span>
@@ -44,8 +45,8 @@ const TaskCard = ({ task, onComplete, onEdit, onDelete }) => {
 
         {!task.completed && (
           <div className={styles.actions}>
-            <button type="button" className={styles.action} onClick={() => onEdit(task)} aria-label="edit"><Icon name="pencil" /></button>
-            <button type="button" className={styles.action} onClick={() => onDelete(task)} aria-label="delete"><Icon name="trash-can" /></button>
+            <button type="button" className={styles.action} onClick={() => onEdit(task)} aria-label="edit">✏️</button>
+            <button type="button" className={styles.action} onClick={() => onDelete(task)} aria-label="delete">🗑️</button>
           </div>
         )}
       </div>

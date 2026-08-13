@@ -63,7 +63,7 @@ const TaskForm = ({ initial, onSubmit, loading, submitLabel }) => {
         label={t('task.category')} options={CATEGORIES} selected={form.category}
         onSelect={(v) => set('category', v)}
         getColor={(c) => CATEGORY_COLOR[c]}
-        getLabel={(c) => <><Icon name={CATEGORY_ICON[c]} /> {t(`task.categories.${c}`)}</>}
+        getLabel={(c) => <><Icon name={CATEGORY_ICON[c]} />{t(`task.categories.${c}`)}</>}
       />
       <OptionSelector
         label={t('task.difficulty')} options={DIFFICULTIES} selected={form.difficulty}
@@ -72,7 +72,7 @@ const TaskForm = ({ initial, onSubmit, loading, submitLabel }) => {
       />
 
       <label className={styles.switch}>
-        <span><Icon name="cycle" /> {t('task.daily')}</span>
+        <span className={styles.dailyLabel}><Icon name="cycle" />{t('task.daily')}</span>
         <input
           type="checkbox" checked={form.isDaily}
           onChange={(e) => set('isDaily', e.target.checked)}
