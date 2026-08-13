@@ -12,6 +12,28 @@
   gap: var(--space-4);
 }
 
+.dashboard,
+.colMain,
+.colSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 880px) {
+  .page {
+    max-width: var(--container-max);
+    padding: var(--space-6);
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    align-items: start;
+    gap: var(--space-5);
+  }
+}
+
 .section {
   color: var(--color-secondary);
   font-size: var(--fs-md);

@@ -6,14 +6,15 @@
  */
 
 import { useTranslation } from 'react-i18next';
+import Icon from '../ui/Icon.jsx';
 import styles from './ClassSelector.module.css';
 
 /** Clases disponibles con su icono (la etiqueta viene de i18n) */
 const CLASSES = [
-  { value: 'warrior', icon: '⚔️' },
-  { value: 'mage', icon: '🧙' },
-  { value: 'rogue', icon: '🗡️' },
-  { value: 'cleric', icon: '✨' },
+  { value: 'warrior', icon: 'broadsword' },
+  { value: 'mage', icon: 'wizard-face' },
+  { value: 'rogue', icon: 'daggers' },
+  { value: 'cleric', icon: 'sparkles' },
 ];
 
 const ClassSelector = ({ value, onChange }) => {
@@ -28,7 +29,7 @@ const ClassSelector = ({ value, onChange }) => {
           onClick={() => onChange(c.value)}
           className={`${styles.option} ${value === c.value ? styles.active : ''}`}
         >
-          {c.icon} {t(`character.classes.${c.value}`)}
+          <Icon name={c.icon} /> {t(`character.classes.${c.value}`)}
         </button>
       ))}
     </div>

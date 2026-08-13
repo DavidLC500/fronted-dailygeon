@@ -1,0 +1,20 @@
+/*
+ * Icon.module.css
+ * La mascara toma el color de fondo (currentColor) y el tamano del
+ * font-size heredado, igual que un caracter emoji inline.
+ */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.15em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}

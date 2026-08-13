@@ -7,6 +7,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Modal from '../ui/Modal.jsx';
+import Icon from '../ui/Icon.jsx';
 import styles from './LevelUpModal.module.css';
 
 const LevelUpModal = ({ level, onClose }) => {
@@ -15,7 +16,7 @@ const LevelUpModal = ({ level, onClose }) => {
   return (
     <Modal open={level != null} onClose={onClose} title={t('character.leveledUp')}>
       <div className={styles.body}>
-        <span className={styles.star}>⭐</span>
+        <span className={styles.star}><Icon name="star" /></span>
         <span className={styles.level}>{t('character.levelUp', { level })}</span>
       </div>
     </Modal>

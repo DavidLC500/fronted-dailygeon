@@ -7,6 +7,7 @@
 
 import { useTranslation } from 'react-i18next';
 import PriorityBadge from './PriorityBadge.jsx';
+import Icon from '../ui/Icon.jsx';
 import {
   CATEGORY_ICON, CATEGORY_COLOR, DIFFICULTY_ICON, DIFFICULTY_COLOR,
 } from '../../utils/taskMeta.js';
@@ -23,7 +24,9 @@ const TaskCard = ({ task, onComplete, onEdit, onDelete }) => {
 
       <div className={styles.content}>
         <div className={styles.top}>
-          <span className={styles.icon}>{CATEGORY_ICON[task.category]}</span>
+          <span className={styles.icon} style={{ color: CATEGORY_COLOR[task.category] }}>
+            <Icon name={CATEGORY_ICON[task.category]} />
+          </span>
           <span className={styles.title}>{task.title}</span>
           <PriorityBadge priority={task.priority} />
         </div>
@@ -32,17 +35,17 @@ const TaskCard = ({ task, onComplete, onEdit, onDelete }) => {
 
         <div className={styles.footer}>
           <span style={{ color: DIFFICULTY_COLOR[task.difficulty] }}>
-            {DIFFICULTY_ICON[task.difficulty]} {t(`task.difficulties.${task.difficulty}`)}
+            <Icon name={DIFFICULTY_ICON[task.difficulty]} /> {t(`task.difficulties.${task.difficulty}`)}
           </span>
           <span className={styles.xp}>+{task.xpReward} XP</span>
           <span className={styles.date}>{due}</span>
-          {task.isDaily && <span className={styles.daily}>🔄</span>}
+          {task.isDaily && <span className={styles.daily}><Icon name="cycle" /></span>}
         </div>
 
         {!task.completed && (
           <div className={styles.actions}>
-            <button type="button" className={styles.action} onClick={() => onEdit(task)} aria-label="edit">✏️</button>
-            <button type="button" className={styles.action} onClick={() => onDelete(task)} aria-label="delete">🗑️</button>
+            <button type="button" className={styles.action} onClick={() => onEdit(task)} aria-label="edit"><Icon name="pencil" /></button>
+            <button type="button" className={styles.action} onClick={() => onDelete(task)} aria-label="delete"><Icon name="trash-can" /></button>
           </div>
         )}
       </div>

@@ -32,26 +32,30 @@ const Boss = () => {
       ) : error ? (
         <p className={styles.error}>{t('common.error')}: {error}</p>
       ) : (
-        <>
-          <BossCard run={data.run} daysLeft={daysLeftInWeek()} />
+        <div className={styles.dashboard}>
+          <div className={styles.colMain}>
+            <BossCard run={data.run} daysLeft={daysLeftInWeek()} />
+          </div>
 
-          <h2 className={styles.section}>{t('boss.history')}</h2>
-          {history.length === 0 ? (
-            <p className={styles.empty}>{t('boss.noHistory')}</p>
-          ) : (
-            <Card>
-              <ul className={styles.list}>
-                {history.map((run) => (
-                  <li key={run._id} className={styles.item}>
-                    <span className={styles.emoji}>{run.boss.emoji}</span>
-                    <span className={styles.name}>{run.boss.name}</span>
-                    <span className={styles.status}>{t(`boss.status.${run.status}`)}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          )}
-        </>
+          <div className={styles.colSide}>
+            <h2 className={styles.section}>{t('boss.history')}</h2>
+            {history.length === 0 ? (
+              <p className={styles.empty}>{t('boss.noHistory')}</p>
+            ) : (
+              <Card>
+                <ul className={styles.list}>
+                  {history.map((run) => (
+                    <li key={run._id} className={styles.item}>
+                      <span className={styles.emoji}>{run.boss.emoji}</span>
+                      <span className={styles.name}>{run.boss.name}</span>
+                      <span className={styles.status}>{t(`boss.status.${run.status}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );

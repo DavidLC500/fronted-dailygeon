@@ -14,6 +14,7 @@ import { errorMessage } from '../utils/errorMessage.js';
 import AppHeader from '../components/layout/AppHeader.jsx';
 import Button from '../components/ui/Button.jsx';
 import Loader from '../components/ui/Loader.jsx';
+import Icon from '../components/ui/Icon.jsx';
 import Modal from '../components/ui/Modal.jsx';
 import ConfirmDialog from '../components/ui/ConfirmDialog.jsx';
 import TaskCard from '../components/task/TaskCard.jsx';
@@ -93,7 +94,7 @@ const Dungeon = () => {
         <p className={styles.error}>{t('common.error')}: {error}</p>
       ) : tasks.length === 0 ? (
         <div className={styles.empty}>
-          <span className={styles.emptyIcon}>🗺️</span>
+          <span className={styles.emptyIcon}><Icon name="treasure-map" /></span>
           <p className={styles.emptyText}>{t('dungeon.empty')}</p>
           <Button variant="secondary" onClick={() => setModal({ mode: 'create' })}>
             + {t('task.new')}

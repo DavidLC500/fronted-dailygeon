@@ -42,10 +42,17 @@ const RadarChart = ({ tasks }) => {
       {/* Iconos de categoria en cada vertice */}
       {CATEGORIES.map((c, i) => {
         const [x, y] = coord(i, RADIUS + 16);
+        const size = 18;
         return (
-          <text key={c} x={x} y={y} className={styles.icon} textAnchor="middle" dominantBaseline="middle">
-            {CATEGORY_ICON[c]}
-          </text>
+          <image
+            key={c}
+            href={`/icons/${CATEGORY_ICON[c]}.svg`}
+            x={x - size / 2}
+            y={y - size / 2}
+            width={size}
+            height={size}
+            className={styles.icon}
+          />
         );
       })}
     </svg>

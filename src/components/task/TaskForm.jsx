@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Input from '../ui/Input.jsx';
 import Button from '../ui/Button.jsx';
+import Icon from '../ui/Icon.jsx';
 import OptionSelector from '../ui/OptionSelector.jsx';
 import {
   PRIORITIES, CATEGORIES, DIFFICULTIES,
@@ -61,7 +62,8 @@ const TaskForm = ({ initial, onSubmit, loading, submitLabel }) => {
       <OptionSelector
         label={t('task.category')} options={CATEGORIES} selected={form.category}
         onSelect={(v) => set('category', v)}
-        getColor={(c) => CATEGORY_COLOR[c]} getLabel={(c) => `${CATEGORY_ICON[c]} ${t(`task.categories.${c}`)}`}
+        getColor={(c) => CATEGORY_COLOR[c]}
+        getLabel={(c) => <><Icon name={CATEGORY_ICON[c]} /> {t(`task.categories.${c}`)}</>}
       />
       <OptionSelector
         label={t('task.difficulty')} options={DIFFICULTIES} selected={form.difficulty}
@@ -70,7 +72,7 @@ const TaskForm = ({ initial, onSubmit, loading, submitLabel }) => {
       />
 
       <label className={styles.switch}>
-        <span>🔄 {t('task.daily')}</span>
+        <span><Icon name="cycle" /> {t('task.daily')}</span>
         <input
           type="checkbox" checked={form.isDaily}
           onChange={(e) => set('isDaily', e.target.checked)}

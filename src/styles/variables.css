@@ -58,4 +58,10 @@
   /* --- Sombras y capas (sombra dura pixel) --- */
   --shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
   --z-modal: 1000;
+
+  /* --- Layout de escritorio ---
+   * Punto de corte: 880px (valor literal repetido en los @media, las custom
+   * properties no se pueden usar dentro de una media feature en CSS plano). */
+  --sidebar-width: 220px;
+  --container-max: 1120px;
 }

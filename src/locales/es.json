@@ -21,7 +21,8 @@
   "calendar": {
     "title": "Calendario",
     "noTasks": "Sin misiones este día",
-    "legend": "🟡 Completadas · 🔴 Pendientes"
+    "legendDone": "Completadas",
+    "legendPending": "Pendientes"
   },
   "boss": {
     "title": "Jefe semanal",

@@ -40,3 +40,41 @@
   border-top-color: var(--color-secondary);
   background: rgba(251, 191, 36, 0.08);
 }
+
+/* Escritorio: sidebar fija a la izquierda en vez de barra inferior.
+ * Mismo componente y markup, solo cambia la disposicion visual. */
+@media (min-width: 880px) {
+  .nav {
+    order: -1;
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    border-top: none;
+    border-right: var(--border-width) solid var(--color-border);
+  }
+
+  .item {
+    flex: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--fs-xs);
+    text-align: left;
+    border-top: none;
+    border-left: 3px solid transparent;
+  }
+
+  .icon {
+    font-size: var(--fs-lg);
+  }
+
+  .active {
+    border-top-color: transparent;
+    border-left-color: var(--color-secondary);
+  }
+}

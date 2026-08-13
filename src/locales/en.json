@@ -21,7 +21,8 @@
   "calendar": {
     "title": "Calendar",
     "noTasks": "No quests on this day",
-    "legend": "🟡 Completed · 🔴 Pending"
+    "legendDone": "Completed",
+    "legendPending": "Pending"
   },
   "boss": {
     "title": "Weekly boss",

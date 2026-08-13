@@ -6,15 +6,16 @@
 
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Icon from '../ui/Icon.jsx';
 import styles from './NavBar.module.css';
 
 /** Secciones de la app (icono + clave de traduccion + ruta) */
 const ITEMS = [
-  { to: '/', icon: '⚔️', key: 'dungeon', end: true },
-  { to: '/calendar', icon: '📅', key: 'calendar' },
-  { to: '/boss', icon: '👹', key: 'boss' },
-  { to: '/character', icon: '🧙', key: 'character' },
-  { to: '/settings', icon: '⚙️', key: 'settings' },
+  { to: '/', icon: 'broadsword', key: 'dungeon', end: true },
+  { to: '/calendar', icon: 'calendar', key: 'calendar' },
+  { to: '/boss', icon: 'ogre', key: 'boss' },
+  { to: '/character', icon: 'wizard-face', key: 'character' },
+  { to: '/settings', icon: 'cog', key: 'settings' },
 ];
 
 const NavBar = () => {
@@ -25,7 +26,7 @@ const NavBar = () => {
     <nav className={styles.nav}>
       {ITEMS.map((item) => (
         <NavLink key={item.to} to={item.to} end={item.end} className={linkClass}>
-          <span className={styles.icon}>{item.icon}</span>
+          <span className={styles.icon}><Icon name={item.icon} /></span>
           {t(`nav.${item.key}`)}
         </NavLink>
       ))}

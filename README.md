@@ -75,6 +75,10 @@ Abre `http://localhost:5173`. Usuario de prueba (con el seed del backend): `aria
 |----------|-------------|
 | `VITE_API_URL` | URL base de la API (ej. `http://localhost:4000/api`) |
 
+## Créditos
+
+Los iconos de `public/icons/` provienen de [game-icons.net](https://game-icons.net) (autores: Lorc, Delapouite y contribuidores del proyecto "badges"), licencia [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
 ## Despliegue (Vercel)
 
 El repositorio incluye `vercel.json` (reescrituras para que el enrutado del lado del cliente funcione). En Vercel:

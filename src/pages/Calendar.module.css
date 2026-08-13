@@ -9,11 +9,31 @@
   padding: var(--space-4);
 }
 
+@media (min-width: 880px) {
+  .page {
+    max-width: var(--container-max);
+    padding: var(--space-6);
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: minmax(320px, 420px) 1fr;
+    align-items: start;
+    gap: var(--space-5);
+  }
+}
+
 .legend {
   text-align: center;
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
   margin: var(--space-3) 0;
+}
+
+.legendDot {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .dayTitle {

@@ -9,6 +9,13 @@
   padding: var(--space-4);
 }
 
+@media (min-width: 880px) {
+  .page {
+    max-width: var(--container-max);
+    padding: var(--space-6);
+  }
+}
+
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -25,6 +32,13 @@
 .list {
   display: grid;
   gap: var(--space-3);
+}
+
+@media (min-width: 880px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    align-items: start;
+  }
 }
 
 .empty {

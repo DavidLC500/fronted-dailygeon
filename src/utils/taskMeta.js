@@ -9,14 +9,14 @@ export const PRIORITIES = ['low', 'medium', 'high', 'critical'];
 export const CATEGORIES = ['general', 'work', 'health', 'fitness', 'learning'];
 export const DIFFICULTIES = ['easy', 'normal', 'hard', 'legendary'];
 
-/** Iconos emoji por categoria */
+/** Iconos por categoria (nombre de icono en public/icons) */
 export const CATEGORY_ICON = {
-  health: '❤️', work: '💼', learning: '📚', fitness: '🏋️', general: '📋',
+  health: 'heart', work: 'briefcase', learning: 'open-book', fitness: 'weight-lifting-up', general: 'checklist',
 };
 
-/** Iconos emoji por dificultad */
+/** Iconos por dificultad (nombre de icono en public/icons) */
 export const DIFFICULTY_ICON = {
-  easy: '🌱', normal: '⚔️', hard: '🔥', legendary: '💀',
+  easy: 'seedling', normal: 'broadsword', hard: 'fire', legendary: 'skull',
 };
 
 /** XP que otorga cada dificultad (para mostrar en el formulario) */
