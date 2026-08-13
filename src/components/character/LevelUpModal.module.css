@@ -13,6 +13,7 @@
 
 .star {
   font-size: 64px;
+  color: var(--color-secondary);
 }
 
 .level {

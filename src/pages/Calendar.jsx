@@ -12,6 +12,7 @@ import { api } from '../api/client.js';
 import AppHeader from '../components/layout/AppHeader.jsx';
 import Card from '../components/ui/Card.jsx';
 import Loader from '../components/ui/Loader.jsx';
+import Icon from '../components/ui/Icon.jsx';
 import CalendarGrid from '../components/calendar/CalendarGrid.jsx';
 import styles from './Calendar.module.css';
 
@@ -36,7 +37,15 @@ const Calendar = () => {
         <div className={styles.dashboard}>
           <div className={styles.colMain}>
             <CalendarGrid tasks={tasks} selected={selected} onSelect={setSelected} />
-            <p className={styles.legend}>{t('calendar.legend')}</p>
+            <p className={styles.legend}>
+              <span className={styles.legendDot}>
+                <Icon name="plain-circle" style={{ color: 'var(--color-secondary)' }} /> {t('calendar.legendDone')}
+              </span>
+              {' · '}
+              <span className={styles.legendDot}>
+                <Icon name="plain-circle" style={{ color: 'var(--color-accent)' }} /> {t('calendar.legendPending')}
+              </span>
+            </p>
           </div>
 
           <div className={styles.colSide}>

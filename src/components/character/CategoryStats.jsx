@@ -7,6 +7,7 @@
 
 import { useTranslation } from 'react-i18next';
 import SegmentBar from '../ui/SegmentBar.jsx';
+import Icon from '../ui/Icon.jsx';
 import { CATEGORIES, CATEGORY_ICON, CATEGORY_COLOR } from '../../utils/taskMeta.js';
 import styles from './CategoryStats.module.css';
 
@@ -23,7 +24,10 @@ const CategoryStats = ({ tasks }) => {
     <div className={styles.wrap}>
       {rows.map(({ cat, count }) => (
         <div key={cat} className={styles.row}>
-          <span className={styles.label}>{CATEGORY_ICON[cat]} {t(`task.categories.${cat}`)}</span>
+          <span className={styles.label}>
+            <Icon name={CATEGORY_ICON[cat]} style={{ color: CATEGORY_COLOR[cat] }} />
+            {' '}{t(`task.categories.${cat}`)}
+          </span>
           <div className={styles.barWrap}>
             <SegmentBar value={count} segments={10} color={CATEGORY_COLOR[cat]} />
           </div>

@@ -17,13 +17,16 @@ import Input from '../components/ui/Input.jsx';
 import Button from '../components/ui/Button.jsx';
 import Loader from '../components/ui/Loader.jsx';
 import StatBar from '../components/ui/StatBar.jsx';
+import Icon from '../components/ui/Icon.jsx';
 import StatBox from '../components/character/StatBox.jsx';
 import CategoryStats from '../components/character/CategoryStats.jsx';
 import RadarChart from '../components/character/RadarChart.jsx';
 import styles from './Character.module.css';
 
 /** Icono por clase del personaje */
-const CLASS_ICON = { warrior: '⚔️', mage: '🧙', rogue: '🗡️', cleric: '✨' };
+const CLASS_ICON = {
+  warrior: 'broadsword', mage: 'wizard-face', rogue: 'daggers', cleric: 'sparkles',
+};
 
 const Character = () => {
   const { t } = useTranslation();
@@ -66,7 +69,7 @@ const Character = () => {
         <div className={styles.colMain}>
           <Card className={styles.hero}>
             <div className={styles.avatar} style={{ backgroundColor: character.avatarColor }}>
-              {CLASS_ICON[character.class]}
+              <Icon name={CLASS_ICON[character.class]} />
             </div>
             {editing ? (
               <div className={styles.nameEdit}>
@@ -80,7 +83,7 @@ const Character = () => {
                 className={styles.nameBtn}
                 onClick={() => { setName(character.name); setEditing(true); }}
               >
-                {character.name} ✏️
+                {character.name} <Icon name="pencil" />
               </button>
             )}
             <p className={styles.class}>{t(`character.classes.${character.class}`)}</p>
@@ -104,10 +107,10 @@ const Character = () => {
             <Loader inline />
           ) : (
             <div className={styles.grid}>
-              <StatBox icon="📋" value={total} label={t('character.total')} />
-              <StatBox icon="✅" value={completed} label={t('character.completedStat')} color="var(--color-success)" />
-              <StatBox icon="⏳" value={pending} label={t('character.pending')} color="var(--color-primary)" />
-              <StatBox icon="📈" value={`${completion}%`} label={t('character.completion')} color="var(--color-secondary)" />
+              <StatBox icon="checklist" value={total} label={t('character.total')} />
+              <StatBox icon="check-mark" value={completed} label={t('character.completedStat')} color="var(--color-success)" />
+              <StatBox icon="hourglass" value={pending} label={t('character.pending')} color="var(--color-primary)" />
+              <StatBox icon="chart" value={`${completion}%`} label={t('character.completion')} color="var(--color-secondary)" />
             </div>
           )}
         </div>

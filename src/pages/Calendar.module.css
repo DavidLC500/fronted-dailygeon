@@ -30,6 +30,12 @@
   margin: var(--space-3) 0;
 }
 
+.legendDot {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .dayTitle {
   color: var(--color-secondary);
   font-size: var(--fs-md);
