@@ -9,6 +9,20 @@
   padding: var(--space-4);
 }
 
+@media (min-width: 880px) {
+  .page {
+    max-width: var(--container-max);
+    padding: var(--space-6);
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: minmax(320px, 420px) 1fr;
+    align-items: start;
+    gap: var(--space-5);
+  }
+}
+
 .legend {
   text-align: center;
   color: var(--color-text-muted);

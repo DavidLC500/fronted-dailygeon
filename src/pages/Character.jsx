@@ -62,62 +62,68 @@ const Character = () => {
     <div className={styles.page}>
       <AppHeader title={t('character.profileTitle')} />
 
-      <Card className={styles.hero}>
-        <div className={styles.avatar} style={{ backgroundColor: character.avatarColor }}>
-          {CLASS_ICON[character.class]}
+      <div className={styles.dashboard}>
+        <div className={styles.colMain}>
+          <Card className={styles.hero}>
+            <div className={styles.avatar} style={{ backgroundColor: character.avatarColor }}>
+              {CLASS_ICON[character.class]}
+            </div>
+            {editing ? (
+              <div className={styles.nameEdit}>
+                <Input id="name" value={name} onChange={(e) => setName(e.target.value)} maxLength={30} />
+                <Button variant="secondary" onClick={saveName} loading={saving}>✓</Button>
+                <Button variant="ghost" onClick={() => setEditing(false)}>✕</Button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                className={styles.nameBtn}
+                onClick={() => { setName(character.name); setEditing(true); }}
+              >
+                {character.name} ✏️
+              </button>
+            )}
+            <p className={styles.class}>{t(`character.classes.${character.class}`)}</p>
+          </Card>
+
+          <Card>
+            <div className={styles.levelRow}>
+              <div className={styles.levelBadge}>
+                <span className={styles.levelNum}>{character.level}</span>
+                <span className={styles.levelLbl}>{t('character.level')}</span>
+              </div>
+              <div className={styles.xpInfo}>
+                <StatBar percent={xpPercent} />
+                <p className={styles.xpText}>{character.currentXP} / {character.maxXP} XP</p>
+              </div>
+            </div>
+          </Card>
+
+          <h2 className={styles.section}>{t('character.stats')}</h2>
+          {loading ? (
+            <Loader inline />
+          ) : (
+            <div className={styles.grid}>
+              <StatBox icon="📋" value={total} label={t('character.total')} />
+              <StatBox icon="✅" value={completed} label={t('character.completedStat')} color="var(--color-success)" />
+              <StatBox icon="⏳" value={pending} label={t('character.pending')} color="var(--color-primary)" />
+              <StatBox icon="📈" value={`${completion}%`} label={t('character.completion')} color="var(--color-secondary)" />
+            </div>
+          )}
         </div>
-        {editing ? (
-          <div className={styles.nameEdit}>
-            <Input id="name" value={name} onChange={(e) => setName(e.target.value)} maxLength={30} />
-            <Button variant="secondary" onClick={saveName} loading={saving}>✓</Button>
-            <Button variant="ghost" onClick={() => setEditing(false)}>✕</Button>
+
+        {!loading && (
+          <div className={styles.colSide}>
+            <h2 className={styles.section}>{t('character.activity')}</h2>
+            <Card>
+              <RadarChart tasks={tasks} />
+            </Card>
+            <Card>
+              <CategoryStats tasks={tasks} />
+            </Card>
           </div>
-        ) : (
-          <button
-            type="button"
-            className={styles.nameBtn}
-            onClick={() => { setName(character.name); setEditing(true); }}
-          >
-            {character.name} ✏️
-          </button>
         )}
-        <p className={styles.class}>{t(`character.classes.${character.class}`)}</p>
-      </Card>
-
-      <Card>
-        <div className={styles.levelRow}>
-          <div className={styles.levelBadge}>
-            <span className={styles.levelNum}>{character.level}</span>
-            <span className={styles.levelLbl}>{t('character.level')}</span>
-          </div>
-          <div className={styles.xpInfo}>
-            <StatBar percent={xpPercent} />
-            <p className={styles.xpText}>{character.currentXP} / {character.maxXP} XP</p>
-          </div>
-        </div>
-      </Card>
-
-      <h2 className={styles.section}>{t('character.stats')}</h2>
-      {loading ? (
-        <Loader inline />
-      ) : (
-        <>
-          <div className={styles.grid}>
-            <StatBox icon="📋" value={total} label={t('character.total')} />
-            <StatBox icon="✅" value={completed} label={t('character.completedStat')} color="var(--color-success)" />
-            <StatBox icon="⏳" value={pending} label={t('character.pending')} color="var(--color-primary)" />
-            <StatBox icon="📈" value={`${completion}%`} label={t('character.completion')} color="var(--color-secondary)" />
-          </div>
-
-          <h2 className={styles.section}>{t('character.activity')}</h2>
-          <Card>
-            <RadarChart tasks={tasks} />
-          </Card>
-          <Card>
-            <CategoryStats tasks={tasks} />
-          </Card>
-        </>
-      )}
+      </div>
     </div>
   );
 };

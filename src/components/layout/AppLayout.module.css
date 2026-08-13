@@ -12,3 +12,16 @@
 .main {
   flex: 1;
 }
+
+/* Escritorio: sidebar fija a la izquierda + contenido con scroll propio */
+@media (min-width: 880px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .main {
+    min-width: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}

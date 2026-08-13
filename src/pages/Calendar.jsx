@@ -33,26 +33,30 @@ const Calendar = () => {
       {loading ? (
         <Loader inline />
       ) : (
-        <>
-          <CalendarGrid tasks={tasks} selected={selected} onSelect={setSelected} />
-          <p className={styles.legend}>{t('calendar.legend')}</p>
+        <div className={styles.dashboard}>
+          <div className={styles.colMain}>
+            <CalendarGrid tasks={tasks} selected={selected} onSelect={setSelected} />
+            <p className={styles.legend}>{t('calendar.legend')}</p>
+          </div>
 
-          <h2 className={styles.dayTitle}>{dayLabel}</h2>
-          {dayTasks.length === 0 ? (
-            <p className={styles.empty}>{t('calendar.noTasks')}</p>
-          ) : (
-            <Card>
-              <ul className={styles.list}>
-                {dayTasks.map((task) => (
-                  <li key={task._id} className={`${styles.item} ${task.completed ? styles.done : ''}`}>
-                    <span>{task.completed ? '✓' : '○'} {task.title}</span>
-                    <span className={styles.xp}>+{task.xpReward} XP</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          )}
-        </>
+          <div className={styles.colSide}>
+            <h2 className={styles.dayTitle}>{dayLabel}</h2>
+            {dayTasks.length === 0 ? (
+              <p className={styles.empty}>{t('calendar.noTasks')}</p>
+            ) : (
+              <Card>
+                <ul className={styles.list}>
+                  {dayTasks.map((task) => (
+                    <li key={task._id} className={`${styles.item} ${task.completed ? styles.done : ''}`}>
+                      <span>{task.completed ? '✓' : '○'} {task.title}</span>
+                      <span className={styles.xp}>+{task.xpReward} XP</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );
