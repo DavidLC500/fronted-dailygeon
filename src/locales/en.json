@@ -114,9 +114,9 @@
     "categories": {
       "health": "Health",
       "work": "Work",
-      "learning": "Learning",
+      "learning": "Study",
       "fitness": "Fitness",
-      "general": "General"
+      "general": "Home"
     },
     "priorities": {
       "low": "Low",

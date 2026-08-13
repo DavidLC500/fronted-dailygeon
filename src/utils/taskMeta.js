@@ -11,7 +11,7 @@ export const DIFFICULTIES = ['easy', 'normal', 'hard', 'legendary'];
 
 /** Iconos por categoria (nombre de icono en public/icons) */
 export const CATEGORY_ICON = {
-  health: 'heart', work: 'briefcase', learning: 'open-book', fitness: 'weight-lifting-up', general: 'checklist',
+  health: 'heart', work: 'briefcase', learning: 'open-book', fitness: 'weight-lifting-up', general: 'house',
 };
 
 /** Iconos por dificultad (nombre de icono en public/icons) */
